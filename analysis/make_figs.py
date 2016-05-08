@@ -1,31 +1,3 @@
-#!/usr/bin/env bash
-# Input argument: name of the top level directory where all
-# the peaks are. Example: ./pypeaks_fdr5_negip_local
-
-# This document is intended to function, in its final version,
-# as a bash script that will take any set of called peaks,
-# (and stable library files), and run everything required to
-# do all analytics and produce all figures.
-# The reason for this is the high probabilty that peak lists
-# will change over the course of paper writing, and it will be
-# impossible to make progress if everything needs to be re-run
-# by hand when something at the start of the pipeline changes.
-
-# We'll place analytical src code in analytics/src/.
-
-# Peak files need to be ordered such that a different top level
-# directory can be specified as a single input to each analytical
-# program, and all of the correct peaks files for that method
-# of peak calling are automatically found.
-# We'll do this by taking putting each method of calling peaks
-# under a peaks/method/ folder. FBF-1 and FBF-2 are then separated into
-# peaks/method/combined_fbf1.txt and peaks/method/combined_fbf2.txt files, for
-# peaks from combined replicates. Individual replicates are
-# put in the same folder, but are given the specific names
-# peaks/method/fbf1_aacc.txt, or the analogous name.
-
-# To take the peaks from fbf*/peaks/ folders into a single methods folder,
-# run python callpeaks_v2/create_dirs_for_analysis.py.
 
 import sys
 import os
